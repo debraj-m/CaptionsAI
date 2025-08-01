@@ -1,0 +1,50 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run CaptionsAI Example",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/example.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Run CaptionsAI Demo",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/demo.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Run CaptionsAI CLI",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/cli.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "args": ["${input:imagePath}"],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Test Setup",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/test_setup.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "imagePath",
+            "description": "Path to image file",
+            "default": "example_image.jpg",
+            "type": "promptString"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Enhanced CaptionsAI Example",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/python.exe",
+            "args": ["enhanced_example.py"],
+            "group": "build",
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Test CaptionsAI Setup",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/python.exe",
+            "args": ["test_setup.py"],
+            "group": "test",
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run Enhanced CaptionsAI CLI",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/python.exe",
+            "args": ["enhanced_cli.py", "${input:imagePath}"],
+            "group": "build",
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Install Dependencies",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/pip.exe",
+            "args": ["install", "-r", "requirements.txt"],
+            "group": "build",
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "imagePath",
+            "description": "Path to image file",
+            "default": "example_image.jpg",
+            "type": "promptString"
+        }
+    ]
+}
