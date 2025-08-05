@@ -2,24 +2,35 @@
 
 An AI-powered tool that generates engaging social media captions, categorizes content, and suggests relevant hashtags for Instagram and Facebook using OpenAI's vision and language models.
 
+## 🚀 New: REST APIs Available!
+
+CaptionsAI now provides **two separate REST APIs** for easy integration:
+
+- **Caption API** (Port 8000): Generate personalized captions
+- **Hashtag API** (Port 8001): Generate relevant hashtags
+
+👉 See [api/README.md](api/README.md) for detailed API documentation and usage examples.
+
 ## Features
 
-- **Image Analysis**: AI-powered image analysis using OpenAI Vision API
-- **Caption Generation**: Create engaging captions in multiple styles (casual, professional, funny, inspirational, etc.)
-- **Content Categorization**: Automatically categorize content into relevant topics
-- **Hashtag Generation**: Generate platform-optimized hashtags for better reach
-- **Multi-Platform Support**: Optimized formatting for Instagram and Facebook
-- **Multiple Variations**: Generate multiple caption options to choose from
-- **Modular Architecture**: Easy to extend and customize
+- **🤖 AI-Powered Analysis**: OpenAI Vision API for intelligent image analysis
+- **✍️ Caption Generation**: Create engaging captions in multiple styles (casual, professional, funny, inspirational, etc.)
+- **🏷️ Smart Hashtag Generation**: Generate platform-optimized hashtags with trending insights
+- **📊 Content Categorization**: Automatically categorize content into relevant topics
+- **🎯 Personalization**: Customize captions based on brand voice, audience, and context
+- **📱 Multi-Platform Support**: Optimized for Instagram, Facebook, Twitter, and LinkedIn
+- **🔄 Multiple Variations**: Generate multiple caption options to choose from
+- **🔧 Modular Architecture**: Easy to extend and customize
+- **🌐 REST APIs**: Easy integration into web applications and services
 
-## Requirements
+## 📋 Requirements
 
 - Python 3.8 or higher
 - OpenAI API key
 - Internet connection for API calls
 - Supported image formats: JPG, PNG, GIF, BMP, WebP
 
-## Installation
+## 🛠️ Installation
 
 1. Clone or download this repository:
 ```bash
@@ -49,9 +60,33 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 3. Get your API key from [OpenAI Platform](https://platform.openai.com/api-keys)
 
-## Usage
+## 📖 Usage
 
-### Command Line Interface
+### 🌐 REST APIs (Recommended)
+
+**Quick Start:**
+```bash
+# Start both APIs
+python api/run_apis.py
+
+# Or start individually
+python api/caption_api.py    # Caption API on port 8000
+python api/hashtag_api.py    # Hashtag API on port 8001
+```
+
+**Test the APIs:**
+```bash
+python api/demo_apis.py      # Interactive demo
+python api/test_apis.py      # API tests
+```
+
+**API Endpoints:**
+- Caption API: `http://localhost:8000` ([Docs](http://localhost:8000/docs))
+- Hashtag API: `http://localhost:8001` ([Docs](http://localhost:8001/docs))
+
+See [api/README.md](api/README.md) for complete API documentation.
+
+### 🖥️ Command Line Interface
 
 Basic usage:
 ```bash
@@ -106,7 +141,14 @@ if result.success:
 
 ```
 CaptionsAI/
-├── captionsai/
+├── api/                               # REST API Components
+│   ├── caption_api.py                 # Caption generation API
+│   ├── hashtag_api.py                 # Hashtag generation API
+│   ├── run_apis.py                    # Run both APIs
+│   ├── test_apis.py                   # API test suite
+│   ├── demo_apis.py                   # API demo script
+│   └── README.md                      # API documentation
+├── captionsai/                        # Core Library
 │   ├── __init__.py                    # Package initialization
 │   ├── config.py                      # Configuration management
 │   ├── ai_analyzer.py                 # OpenAI API integration

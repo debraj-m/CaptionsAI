@@ -60,6 +60,99 @@
                 "focus": false,
                 "panel": "shared"
             }
+        },
+                {
+            "label": "Run Caption API",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/python.exe",
+            "args": ["api/caption_api.py"],
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "Run Hashtag API",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/python.exe",
+            "args": ["api/hashtag_api.py"],
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "Run Both APIs",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/python.exe",
+            "args": ["api/run_apis.py"],
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": false
+            }
+        },
+        {
+            "label": "Test APIs",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/python.exe",
+            "args": ["api/test_apis.py"],
+            "group": "test",
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Demo APIs",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/python.exe",
+            "args": ["api/demo_apis.py"],
+            "group": "test",
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Demo APIs",
+            "type": "shell",
+            "command": "C:/Users/debra/Desktop/CODE/CaptionsAI/.venv/Scripts/python.exe",
+            "args": ["api/demo_apis.py"],
+            "group": "test",
+            "isBackground": false,
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
         }
     ],
     "inputs": [
